@@ -1,12 +1,12 @@
 package com.safarandras.RockPaperScissors.dto;
 
-public class GamePlayerHandDTO {
+public class PlayerHandDTO extends DTO {
     private String playerHand;
 
-    public GamePlayerHandDTO() {
+    public PlayerHandDTO() {
     }
 
-    public GamePlayerHandDTO(String playerHand) {
+    public PlayerHandDTO(String playerHand) {
         this.playerHand = playerHand;
     }
 
@@ -21,7 +21,7 @@ public class GamePlayerHandDTO {
     @Override
     public String toString() {
         return "GamePlayerHandDTO{" +
-                "playerHand='" + playerHand + '\'' +
+                "playerHand=" + playerHand + '\'' +
                 '}';
     }
 }

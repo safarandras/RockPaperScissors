@@ -2,7 +2,7 @@ package com.safarandras.RockPaperScissors.dto;
 
 import java.io.Serializable;
 
-public class GameWithRuleDTO extends GameDTO implements Serializable {
+public class GameWithRuleDTO extends DTO implements Serializable {
     private  boolean hasPlayerWon;
     private  String computerHand;
     private  String rule;
