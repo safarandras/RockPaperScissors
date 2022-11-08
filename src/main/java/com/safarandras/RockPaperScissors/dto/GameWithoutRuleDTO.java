@@ -2,7 +2,7 @@ package com.safarandras.RockPaperScissors.dto;
 
 import com.safarandras.RockPaperScissors.model.Hand;
 
-public class GameWithoutRuleDTO {
+public class GameWithoutRuleDTO extends GameDTO{
     private final boolean hasPlayerWon;
     private final Hand computerHand;
 
