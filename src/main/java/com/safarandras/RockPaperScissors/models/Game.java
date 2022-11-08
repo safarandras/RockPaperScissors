@@ -1,6 +1,6 @@
 package com.safarandras.RockPaperScissors.models;
 
-import Util.RandomUtil;
+import com.safarandras.RockPaperScissors.util.RandomUtil;
 
 public class Game {
     private final Hand playerHand;
