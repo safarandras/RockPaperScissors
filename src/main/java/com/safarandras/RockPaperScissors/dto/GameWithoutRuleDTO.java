@@ -1,21 +1,40 @@
 package com.safarandras.RockPaperScissors.dto;
 
-import com.safarandras.RockPaperScissors.model.Hand;
+import java.io.Serializable;
 
-public class GameWithoutRuleDTO extends GameDTO{
-    private final boolean hasPlayerWon;
-    private final Hand computerHand;
+public class GameWithoutRuleDTO extends GameDTO implements Serializable{
+    private boolean hasPlayerWon;
+    private String computerHand;
 
-    public GameWithoutRuleDTO(Hand computerHand, boolean hasPlayerWon) {
+    public GameWithoutRuleDTO() {
+    }
+
+    public GameWithoutRuleDTO(String computerHand, boolean hasPlayerWon) {
         this.hasPlayerWon = hasPlayerWon;
+        this.computerHand = computerHand;
+    }
+
+    public boolean isHasPlayerWon() {
+        return hasPlayerWon;
+    }
+
+    public void setHasPlayerWon(boolean hasPlayerWon) {
+        this.hasPlayerWon = hasPlayerWon;
+    }
+
+    public String getComputerHand() {
+        return computerHand;
+    }
+
+    public void setComputerHand(String computerHand) {
         this.computerHand = computerHand;
     }
 
     @Override
     public String toString() {
-        return "GameDTO{" +
+        return "GameWithoutRuleDTO{" +
                 "hasPlayerWon=" + hasPlayerWon +
-                ", computerHand=" + computerHand.getLabel() +
+                ", computerHand=" + computerHand +
                 '}';
     }
 }
