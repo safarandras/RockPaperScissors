@@ -7,7 +7,7 @@ public class Game {
     private final Hand computerHand;
     private final Rule rule;
 
-    public Game(String handLabel, RandomUtil random){
+    public Game(String handLabel, RandomUtil random) throws IllegalArgumentException{
         if (Hand.getHandByLabel(handLabel) == null) throw new IllegalArgumentException();
         playerHand = Hand.getHandByLabel(handLabel);
         int handValue = random.nextInt(2);

@@ -7,6 +7,7 @@ import com.safarandras.RockPaperScissors.model.Game;
 import com.safarandras.RockPaperScissors.model.Hand;
 import com.safarandras.RockPaperScissors.model.Rule;
 import com.safarandras.RockPaperScissors.util.RandomUtil;
+import org.springframework.beans.factory.annotation.Autowired;
 
 public class GameService {
     private final RandomUtil randomUtil;
@@ -15,7 +16,7 @@ public class GameService {
         this.randomUtil = randomUtil;
     }
 
-    public GameDTO playGame(String playerHand, boolean explain){
+    public GameDTO playGame(String playerHand, boolean explain) throws IllegalArgumentException{
         Game game = new Game(playerHand, randomUtil);
         Hand computerHand = game.getComputerHand();
         boolean hasPlayerWon = game.hasPlayerWon();
