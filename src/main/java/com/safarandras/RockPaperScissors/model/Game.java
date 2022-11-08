@@ -10,7 +10,7 @@ public class Game {
     public Game(String handLabel, RandomUtil random) throws IllegalArgumentException{
         if (Hand.getHandByLabel(handLabel) == null) throw new IllegalArgumentException();
         playerHand = Hand.getHandByLabel(handLabel);
-        int handValue = random.nextInt(2);
+        int handValue = random.nextInt(3);
         computerHand = Hand.values()[handValue];
         if (playerHand == Hand.ROCK && computerHand == Hand.SCISSORS) rule = Rule.ROCK_WINS;
         else if (playerHand == Hand.ROCK && computerHand == Hand.PAPER) rule = Rule.ROCK_LOSES;

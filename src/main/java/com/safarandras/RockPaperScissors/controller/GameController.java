@@ -1,6 +1,7 @@
 package com.safarandras.RockPaperScissors.controller;
 
 import com.safarandras.RockPaperScissors.dto.GameDTO;
+import com.safarandras.RockPaperScissors.dto.GamePlayerHandDTO;
 import com.safarandras.RockPaperScissors.model.Rule;
 import com.safarandras.RockPaperScissors.service.GameService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,12 +32,12 @@ public class GameController {
     }
 
     @RequestMapping(path = "/play", method = POST)
-    public ResponseEntity<GameDTO> playGame(@RequestParam boolean explain, @RequestBody String playerHand){
+    public ResponseEntity<GameDTO> playGame(@RequestParam boolean explain, @RequestBody GamePlayerHandDTO body){
         try{
-            return new ResponseEntity<>(gameService.playGame(playerHand, explain), HttpStatus.OK);
+            return ResponseEntity.ok(gameService.playGame(body.getPlayerHand(), explain));
         }
         catch (IllegalArgumentException e){
-            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(null);
         }
     }
 }
