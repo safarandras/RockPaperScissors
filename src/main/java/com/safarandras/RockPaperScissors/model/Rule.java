@@ -1,5 +1,8 @@
 package com.safarandras.RockPaperScissors.model;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public enum Rule {
     ROCK_WINS("Rock wins against scissors"),
     ROCK_LOSES("Rock loses against paper"),
@@ -15,7 +18,15 @@ public enum Rule {
         this.rule = rule;
     }
 
-    String getRule() {
+    public String getRule() {
         return rule;
+    }
+
+    public Map<Rule, String> getALlRules(){
+        Map<Rule, String> rules = new HashMap<>();
+        for (Rule rule : Rule.values()){
+            rules.put(rule, rule.getRule());
+        }
+        return rules;
     }
 }
