@@ -8,10 +8,12 @@ import com.safarandras.RockPaperScissors.model.Hand;
 import com.safarandras.RockPaperScissors.model.Rule;
 import com.safarandras.RockPaperScissors.util.RandomUtil;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
+@Component
 public class GameService {
     private final RandomUtil randomUtil;
-
+    @Autowired
     public GameService(RandomUtil randomUtil) {
         this.randomUtil = randomUtil;
     }
