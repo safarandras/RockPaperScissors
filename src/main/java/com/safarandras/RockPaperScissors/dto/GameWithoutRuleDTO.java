@@ -2,11 +2,11 @@ package com.safarandras.RockPaperScissors.dto;
 
 import com.safarandras.RockPaperScissors.model.Hand;
 
-public class GameDTO {
+public class GameWithoutRuleDTO {
     private final boolean hasPlayerWon;
     private final Hand computerHand;
 
-    public GameDTO(Hand computerHand, boolean hasPlayerWon) {
+    public GameWithoutRuleDTO(Hand computerHand, boolean hasPlayerWon) {
         this.hasPlayerWon = hasPlayerWon;
         this.computerHand = computerHand;
     }
