@@ -1,4 +1,4 @@
-package Util;
+package com.safarandras.RockPaperScissors.util;
 
 import java.util.Random;
 

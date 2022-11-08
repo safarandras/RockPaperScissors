@@ -1,6 +1,6 @@
-package com.safarandras.RockPaperScissors.models;
+package com.safarandras.RockPaperScissors.model;
 
-import Util.RandomUtil;
+import com.safarandras.RockPaperScissors.util.RandomUtil;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
