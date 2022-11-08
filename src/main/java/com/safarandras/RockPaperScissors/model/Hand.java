@@ -1,4 +1,4 @@
-package com.safarandras.RockPaperScissors.models;
+package com.safarandras.RockPaperScissors.model;
 
 public enum Hand {
     ROCK("Rock"),

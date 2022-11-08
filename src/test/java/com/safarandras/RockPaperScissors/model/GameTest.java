@@ -1,4 +1,4 @@
-package com.safarandras.RockPaperScissors.models;
+package com.safarandras.RockPaperScissors.model;
 
 import com.safarandras.RockPaperScissors.util.RandomUtil;
 import org.junit.jupiter.api.Test;
