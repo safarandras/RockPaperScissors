@@ -22,7 +22,7 @@ public enum Rule {
         return rule;
     }
 
-    public Map<Rule, String> getALlRules(){
+    public static Map<Rule, String> getAllRules(){
         Map<Rule, String> rules = new HashMap<>();
         for (Rule rule : Rule.values()){
             rules.put(rule, rule.getRule());
