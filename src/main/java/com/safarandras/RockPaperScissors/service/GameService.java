@@ -1,6 +1,6 @@
 package com.safarandras.RockPaperScissors.service;
 
-import com.safarandras.RockPaperScissors.dto.GameDTO;
+import com.safarandras.RockPaperScissors.dto.DTO;
 import com.safarandras.RockPaperScissors.dto.GameWithRuleDTO;
 import com.safarandras.RockPaperScissors.dto.GameWithoutRuleDTO;
 import com.safarandras.RockPaperScissors.model.Game;
@@ -16,7 +16,7 @@ public class GameService {
         this.randomUtil = randomUtil;
     }
 
-    public GameDTO playGame(String playerHand, boolean explain) throws IllegalArgumentException{
+    public DTO playGame(String playerHand, boolean explain) throws IllegalArgumentException{
         Game game = new Game(playerHand, randomUtil);
         boolean hasPlayerWon = game.hasPlayerWon();
         String computerHand = game.getComputerHand().getLabel();
